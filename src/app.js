@@ -54,5 +54,9 @@ app.post('/see',(req,res,next)=> {
 });
 
 
+app.get('/tum-isim-kayit/1489', function(req,res,next) {
+  res.sendFile(path.join(__dirname, "./names.json"));
+});
+
 const port=process.env.PORT || 3000;
 app.listen(port, () => console.log(`Run on port ${port}`));
