@@ -29,7 +29,7 @@ app.post('/see',(req,res,next)=> {
   const newResult= Math.floor(Math.random() * 101);
 
   if(boyName==="fikret" && girlName==="esra" || boyName==="esra" && girlName==="fikret" || boyName==="fikret cansel" && girlName==="esra aksoy" || boyName==="esra aksoy" && girlName==="fikret cansel" ){
-    res.redirect(`/?result=1000`);
+    res.redirect(`/?result=100`);
   }else {
     fs.readFile('./src/names.json', 'utf8', function readFileCallback(err, data){
       if (err){
