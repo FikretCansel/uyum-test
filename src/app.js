@@ -46,7 +46,6 @@ app.post('/see',(req,res,next)=> {
         newData.push({boy:boyName,girl:girlName,scor:newResult});
         fs.writeFile('./src/names.json', JSON.stringify(newData), function (err) {
           if (err){
-            console.log("kaydetmede sorun var")
             return;
           } else res.redirect(`/?result=${newResult}`)
         });
